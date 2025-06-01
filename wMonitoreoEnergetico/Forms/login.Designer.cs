@@ -75,7 +75,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtUser.StateCommon.Border.Rounding = 20;
             this.txtUser.TabIndex = 2;
-            this.txtUser.Text = "Enter User";
             // 
             // lblLogin
             // 
@@ -110,7 +109,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtPassword.StateCommon.Border.Rounding = 20;
             this.txtPassword.TabIndex = 6;
-            this.txtPassword.Text = "Enter Password";
             // 
             // frmLogin
             // 
