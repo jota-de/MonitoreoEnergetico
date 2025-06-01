@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ComponentFactory.Krypton.Toolkit; 
+using ComponentFactory.Krypton.Toolkit;
 
 namespace wMonitoreoEnergetico
 {
-    public partial class frmLogin : KryptonForm
+    public partial class Main : KryptonForm
     {
-        public frmLogin()
+        public Main()
         {
             InitializeComponent();
         }
