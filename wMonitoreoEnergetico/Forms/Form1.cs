@@ -11,9 +11,9 @@ using ComponentFactory.Krypton.Toolkit;
 
 namespace wMonitoreoEnergetico
 {
-    public partial class Form1 : KryptonForm
+    public partial class frmLogin : KryptonForm
     {
-        public Form1()
+        public frmLogin()
         {
             InitializeComponent();
         }
