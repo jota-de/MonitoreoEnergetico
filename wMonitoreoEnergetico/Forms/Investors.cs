@@ -81,5 +81,11 @@ namespace wMonitoreoEnergetico.Forms
             txtEmailInvestor.Clear();
             txtPhoneInvestor.Clear();
         }
+
+        private void btnViewInvestor_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frmViewInvestors().Show();
+        }
     }
 }

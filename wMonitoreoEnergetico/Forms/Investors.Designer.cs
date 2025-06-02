@@ -265,6 +265,7 @@
             this.btnViewInvestor.StateCommon.Border.Rounding = 20;
             this.btnViewInvestor.TabIndex = 23;
             this.btnViewInvestor.Values.Text = "View Investor";
+            this.btnViewInvestor.Click += new System.EventHandler(this.btnViewInvestor_Click);
             // 
             // lblInvestors
             // 
