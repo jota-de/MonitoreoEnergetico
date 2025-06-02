@@ -10,10 +10,12 @@ namespace wMonitoreoEnergetico.Data.UnitOfWork
     public class UnitOfWork : IUnitOfWork
     {
         public IInvestorRepository InvestorRepository { get; }
+        public IConstructorRepository constructorRepository { get; }
 
         public UnitOfWork()
         {
             InvestorRepository = new InvestorRepository();
+            constructorRepository = new ConstructorRepository();
         }
     }
 }

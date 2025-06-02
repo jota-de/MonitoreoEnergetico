@@ -81,5 +81,7 @@ namespace wMonitoreoEnergetico.Data.Repositories
             cmd.ExecuteNonQuery();
             _conexion.Close();
         }
+
+       
     }
 }

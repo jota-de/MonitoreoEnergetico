@@ -62,6 +62,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Repositories\ConstructorRepository.cs" />
+    <Compile Include="Data\Repositories\IConstructorRepository.cs" />
     <Compile Include="Data\Repositories\IInvestorRepository.cs" />
     <Compile Include="Data\Repositories\InvestorRepository.cs" />
     <Compile Include="Data\UnitOfWork\IUnitOfWork.cs" />

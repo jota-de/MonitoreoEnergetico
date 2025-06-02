@@ -37,8 +37,8 @@
             this.btnConstructors = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnInvestor = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnProjects = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.btnViewInvestor = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.btnCreateInvestor = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnViewConstructors = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnCreateConstructor = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.lblTypeInvesotr = new System.Windows.Forms.Label();
             this.txtPhoneConstructor = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lblPhoneInvestor = new System.Windows.Forms.Label();
@@ -148,29 +148,31 @@
             this.btnProjects.TabIndex = 9;
             this.btnProjects.Values.Text = "Projects";
             // 
-            // btnViewInvestor
+            // btnViewConstructors
             // 
-            this.btnViewInvestor.Location = new System.Drawing.Point(668, 336);
-            this.btnViewInvestor.Name = "btnViewInvestor";
-            this.btnViewInvestor.Size = new System.Drawing.Size(150, 35);
-            this.btnViewInvestor.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btnViewConstructors.Location = new System.Drawing.Point(668, 336);
+            this.btnViewConstructors.Name = "btnViewConstructors";
+            this.btnViewConstructors.Size = new System.Drawing.Size(150, 35);
+            this.btnViewConstructors.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnViewInvestor.StateCommon.Border.Rounding = 20;
-            this.btnViewInvestor.TabIndex = 47;
-            this.btnViewInvestor.Values.Text = "View Investor";
+            this.btnViewConstructors.StateCommon.Border.Rounding = 20;
+            this.btnViewConstructors.TabIndex = 47;
+            this.btnViewConstructors.Values.Text = "View Constructors";
+            this.btnViewConstructors.Click += new System.EventHandler(this.btnViewConstructors_Click);
             // 
-            // btnCreateInvestor
+            // btnCreateConstructor
             // 
-            this.btnCreateInvestor.Location = new System.Drawing.Point(331, 336);
-            this.btnCreateInvestor.Name = "btnCreateInvestor";
-            this.btnCreateInvestor.Size = new System.Drawing.Size(150, 35);
-            this.btnCreateInvestor.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btnCreateConstructor.Location = new System.Drawing.Point(331, 336);
+            this.btnCreateConstructor.Name = "btnCreateConstructor";
+            this.btnCreateConstructor.Size = new System.Drawing.Size(150, 35);
+            this.btnCreateConstructor.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnCreateInvestor.StateCommon.Border.Rounding = 20;
-            this.btnCreateInvestor.TabIndex = 38;
-            this.btnCreateInvestor.Values.Text = "Create Investor";
+            this.btnCreateConstructor.StateCommon.Border.Rounding = 20;
+            this.btnCreateConstructor.TabIndex = 38;
+            this.btnCreateConstructor.Values.Text = "Create Constructor";
+            this.btnCreateConstructor.Click += new System.EventHandler(this.btnCreateConstructor_Click);
             // 
             // lblTypeInvesotr
             // 
@@ -284,8 +286,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(934, 461);
-            this.Controls.Add(this.btnViewInvestor);
-            this.Controls.Add(this.btnCreateInvestor);
+            this.Controls.Add(this.btnViewConstructors);
+            this.Controls.Add(this.btnCreateConstructor);
             this.Controls.Add(this.lblTypeInvesotr);
             this.Controls.Add(this.txtPhoneConstructor);
             this.Controls.Add(this.lblPhoneInvestor);
@@ -322,8 +324,8 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnConstructors;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnInvestor;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnProjects;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnViewInvestor;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnCreateInvestor;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnViewConstructors;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnCreateConstructor;
         private System.Windows.Forms.Label lblTypeInvesotr;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPhoneConstructor;
         private System.Windows.Forms.Label lblPhoneInvestor;

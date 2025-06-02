@@ -8,13 +8,13 @@ namespace wMonitoreoEnergetico.Entities
 {
     public class Constructor
     {
-        public short idInversor { get; set; }
-        public string nombreInversor { get; set; }
-        public string codigoInversor { get; set; }
-        public string tipoInversor { get; set; }
-        public string paisOrigenInversor { get; set; }
-        public string emailInversor { get; set; }
-        public int telefonoInversor { get; set; }
+        public short idConstructor { get; set; }
+        public string nombreConstructor { get; set; }
+        public string codigoConstructor { get; set; }
+        public string tipoConstructor { get; set; }
+        public string paisOrigenConstructor { get; set; }
+        public string emailConstructor { get; set; }
+        public int telefonoConstructor { get; set; }
 
     }
 }
