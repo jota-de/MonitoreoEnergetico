@@ -103,6 +103,7 @@
             this.btnConstructors.StateCommon.Border.Rounding = 20;
             this.btnConstructors.TabIndex = 11;
             this.btnConstructors.Values.Text = "Constructors";
+            this.btnConstructors.Click += new System.EventHandler(this.btnConstructors_Click);
             // 
             // btnInvestor
             // 

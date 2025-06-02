@@ -79,7 +79,7 @@ namespace wMonitoreoEnergetico.Forms
         private void btnViewConstructors_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new frmConstructors().Show();
+            new frmViewConstructors().Show();
         }
     }
 }

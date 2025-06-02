@@ -101,6 +101,12 @@
     <Compile Include="Forms\Projects.Designer.cs">
       <DependentUpon>Projects.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ViewConstructors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewConstructors.Designer.cs">
+      <DependentUpon>ViewConstructors.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ViewInvestors.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Projects.resx">
       <DependentUpon>Projects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewConstructors.resx">
+      <DependentUpon>ViewConstructors.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ViewInvestors.resx">
       <DependentUpon>ViewInvestors.cs</DependentUpon>

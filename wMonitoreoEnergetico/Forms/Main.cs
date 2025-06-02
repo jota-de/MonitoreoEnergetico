@@ -28,5 +28,11 @@ namespace wMonitoreoEnergetico
             this.Hide();
             new frmInvestors().Show();
         }
+
+        private void btnConstructors_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frmConstructors().Show();
+        }
     }
 }
