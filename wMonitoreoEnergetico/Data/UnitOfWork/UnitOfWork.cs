@@ -7,13 +7,13 @@ using wMonitoreoEnergetico.Data.Repositories;
 
 namespace wMonitoreoEnergetico.Data.UnitOfWork
 {
-    public class UnitOfWork :IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
-        public IInvestorRepository investorRepository { get;}
+        public IInvestorRepository InvestorRepository { get; }
 
         public UnitOfWork()
         {
-            investorRepository = new InvestorRepository();
+            InvestorRepository = new InvestorRepository();
         }
     }
 }
