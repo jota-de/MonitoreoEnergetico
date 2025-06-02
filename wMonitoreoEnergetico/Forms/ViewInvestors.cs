@@ -143,8 +143,16 @@ namespace wMonitoreoEnergetico.Forms
             }
         }
 
-
-
+        private void btnProjects_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frmProjects().Show();
+        }
+        private void btnConstructors_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frmConstructors().Show();
+        }
         //---------------- OMITIR LO SIGUIENTE-------------------------
         private void btnClearInvestors_Click(object sender, EventArgs e)
         {
@@ -167,6 +175,11 @@ namespace wMonitoreoEnergetico.Forms
         }
 
         private void kryptonTextBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnInvestor_Click(object sender, EventArgs e)
         {
 
         }

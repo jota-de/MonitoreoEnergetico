@@ -130,6 +130,7 @@
             this.btnConstructors.StateCommon.Border.Rounding = 20;
             this.btnConstructors.TabIndex = 11;
             this.btnConstructors.Values.Text = "Constructors";
+            this.btnConstructors.Click += new System.EventHandler(this.btnConstructors_Click);
             // 
             // btnInvestor
             // 
@@ -142,6 +143,7 @@
             this.btnInvestor.StateCommon.Border.Rounding = 20;
             this.btnInvestor.TabIndex = 10;
             this.btnInvestor.Values.Text = "Investors";
+            this.btnInvestor.Click += new System.EventHandler(this.btnInvestor_Click);
             // 
             // btnProjects
             // 
@@ -154,6 +156,7 @@
             this.btnProjects.StateCommon.Border.Rounding = 20;
             this.btnProjects.TabIndex = 9;
             this.btnProjects.Values.Text = "Projects";
+            this.btnProjects.Click += new System.EventHandler(this.btnProjects_Click);
             // 
             // lblInvestors
             // 
