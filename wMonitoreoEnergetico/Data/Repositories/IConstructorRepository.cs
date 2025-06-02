@@ -13,7 +13,6 @@ namespace wMonitoreoEnergetico.Data.Repositories
         void Insertar(Constructor constructor);
         void Actualizar(Constructor constructor);
         void Eliminar(short idConstructor);
-        void ObtenerPorId(short idConstructor);
 
     }
 }

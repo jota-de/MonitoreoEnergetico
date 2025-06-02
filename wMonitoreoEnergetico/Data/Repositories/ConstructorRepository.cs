@@ -85,16 +85,7 @@ namespace wMonitoreoEnergetico.Data.Repositories
             _conexion.Close();
         }
 
-        public void ObtenerPorId(short idEmpresa)
-        {
-            SqlCommand cmd = new SqlCommand("sp_BuscarConstructorPorId", _conexion);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@idEmpresa", idEmpresa);
-            _conexion.Open();
-            cmd.ExecuteNonQuery();
-            _conexion.Close();
-
-        }
+        
 
     }
 }

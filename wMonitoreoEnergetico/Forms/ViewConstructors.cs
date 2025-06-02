@@ -33,10 +33,13 @@ namespace wMonitoreoEnergetico.Forms
             cmbTypeConstructor.Items.Add("Hydro");
             cmbTypeConstructor.SelectedIndex = 0;
             #endregion
+
+            CargarConstructor();
         }
         private void CargarConstructor()
         {
-            dgvConstructor.DataSource = _uow.constructorRepository.ObtenerTodos();
+            var constructores = _uow.constructorRepository.ObtenerTodos();
+            dgvConstructor.DataSource =constructores;
             dgvConstructor.ClearSelection();
         }
         private bool ValidarCampos()
@@ -80,11 +83,17 @@ namespace wMonitoreoEnergetico.Forms
                 CargarConstructor();
                 LimpiarCampos();
             }
+            else
+            {
+                MessageBox.Show("Seleccione un Constructor para actualizar.");
+            }
+
         }
 
 
         private void btnDeleteConstructor_Click(object sender, EventArgs e)
         {
+            ConstructorSeleccionadoId = Convert.ToInt16(txtConstructorId.Text.Trim());
             if (ConstructorSeleccionadoId.HasValue)
             {
                 var confirm = MessageBox.Show("¿Estás seguro de eliminar este Constructor?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -93,27 +102,57 @@ namespace wMonitoreoEnergetico.Forms
                     _uow.constructorRepository.Eliminar(ConstructorSeleccionadoId.Value);
                     CargarConstructor();
                     LimpiarCampos();
+                    MessageBox.Show("Constructor eliminado correctamente.");
 
                 }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un Constructor para eliminar.");
             }
         }
 
         private void btnSearchConstructor_Click(object sender, EventArgs e)
         {
-            if (ConstructorSeleccionadoId.HasValue)
-            {
-                
-              _uow.constructorRepository.ObtenerPorId(ConstructorSeleccionadoId.Value);
-              CargarConstructor();
-              LimpiarCampos();
-
            
+            BuscarYMostrarConstructorPorId(Convert.ToInt16(txtConstructorId.Text.Trim()));
+        }
+        private void BuscarYMostrarConstructorPorId(short idConstructor)
+        {
+            var constructores = _uow.constructorRepository.ObtenerTodos();
+            var construtor = constructores.FirstOrDefault(i => i.idConstructor == idConstructor);
+
+            if (construtor != null)
+            {
+                ConstructorSeleccionadoId = construtor.idConstructor;
+                txtConstructorName.Text = construtor.nombreConstructor;
+                cmbTypeConstructor.SelectedItem = construtor.tipoConstructor;
+                txtCountryConstructor.Text = construtor.paisOrigenConstructor;
+                txtEmailConstructor.Text = construtor.emailConstructor;
+                txtPhoneConstructor.Text = construtor.telefonoConstructor.ToString();
+            }
+            else
+            {
+                MessageBox.Show("No se encontró un inversor con ese ID.");
+                LimpiarCampos();
             }
         }
         private void btnBackConstructor_Click(object sender, EventArgs e)
         {
             this.Hide();
             new frmConstructors().Show();
+        }
+
+        private void btnProjects_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frmProjects().Show();
+        }
+
+        private void btnInvestor_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frmInvestors().Show();
         }
     }
 }

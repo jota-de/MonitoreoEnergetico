@@ -81,5 +81,17 @@ namespace wMonitoreoEnergetico.Forms
             this.Hide();
             new frmViewConstructors().Show();
         }
+
+        private void btnProjects_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frmProjects().Show();
+        }
+
+        private void btnInvestor_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frmInvestors().Show();
+        }
     }
 }
