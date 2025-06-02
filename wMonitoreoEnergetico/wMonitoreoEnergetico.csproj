@@ -66,11 +66,15 @@
     <Compile Include="Data\Repositories\IConstructorRepository.cs" />
     <Compile Include="Data\Repositories\IInvestorRepository.cs" />
     <Compile Include="Data\Repositories\InvestorRepository.cs" />
+    <Compile Include="Data\Repositories\IProjectRepository.cs" />
+    <Compile Include="Data\Repositories\ProjectRespository.cs" />
     <Compile Include="Data\UnitOfWork\IUnitOfWork.cs" />
     <Compile Include="Data\UnitOfWork\UnitOfWork.cs" />
     <Compile Include="Entities\Constructor.cs" />
     <Compile Include="Entities\Investor.cs" />
+    <Compile Include="Entities\Project.cs" />
     <Compile Include="Entities\Usuario.cs" />
+    <Compile Include="Factory\FactoryProject.cs" />
     <Compile Include="Forms\Constructors.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,8 +165,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Factory\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
