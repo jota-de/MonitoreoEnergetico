@@ -32,11 +32,11 @@
             this.kryptonConfi = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnProjects = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.btnInvestor = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.btnConstructors = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnConstructors = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnInvestor = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnProjects = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -80,37 +80,17 @@
             this.panel1.Size = new System.Drawing.Size(200, 466);
             this.panel1.TabIndex = 7;
             // 
-            // panel2
+            // kryptonButton3
             // 
-            this.panel2.BackColor = System.Drawing.Color.LimeGreen;
-            this.panel2.Location = new System.Drawing.Point(194, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(750, 50);
-            this.panel2.TabIndex = 8;
-            // 
-            // btnProjects
-            // 
-            this.btnProjects.Location = new System.Drawing.Point(24, 156);
-            this.btnProjects.Name = "btnProjects";
-            this.btnProjects.Size = new System.Drawing.Size(150, 35);
-            this.btnProjects.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonButton3.Location = new System.Drawing.Point(24, 414);
+            this.kryptonButton3.Name = "kryptonButton3";
+            this.kryptonButton3.Size = new System.Drawing.Size(150, 35);
+            this.kryptonButton3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnProjects.StateCommon.Border.Rounding = 20;
-            this.btnProjects.TabIndex = 9;
-            this.btnProjects.Values.Text = "Projects";
-            // 
-            // btnInvestor
-            // 
-            this.btnInvestor.Location = new System.Drawing.Point(24, 197);
-            this.btnInvestor.Name = "btnInvestor";
-            this.btnInvestor.Size = new System.Drawing.Size(150, 35);
-            this.btnInvestor.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnInvestor.StateCommon.Border.Rounding = 20;
-            this.btnInvestor.TabIndex = 10;
-            this.btnInvestor.Values.Text = "Investors";
+            this.kryptonButton3.StateCommon.Border.Rounding = 20;
+            this.kryptonButton3.TabIndex = 12;
+            this.kryptonButton3.Values.Text = "Log out";
             // 
             // btnConstructors
             // 
@@ -124,17 +104,38 @@
             this.btnConstructors.TabIndex = 11;
             this.btnConstructors.Values.Text = "Constructors";
             // 
-            // kryptonButton3
+            // btnInvestor
             // 
-            this.kryptonButton3.Location = new System.Drawing.Point(24, 414);
-            this.kryptonButton3.Name = "kryptonButton3";
-            this.kryptonButton3.Size = new System.Drawing.Size(150, 35);
-            this.kryptonButton3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btnInvestor.Location = new System.Drawing.Point(24, 197);
+            this.btnInvestor.Name = "btnInvestor";
+            this.btnInvestor.Size = new System.Drawing.Size(150, 35);
+            this.btnInvestor.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton3.StateCommon.Border.Rounding = 20;
-            this.kryptonButton3.TabIndex = 12;
-            this.kryptonButton3.Values.Text = "Log out";
+            this.btnInvestor.StateCommon.Border.Rounding = 20;
+            this.btnInvestor.TabIndex = 10;
+            this.btnInvestor.Values.Text = "Investors";
+            this.btnInvestor.Click += new System.EventHandler(this.btnInvestor_Click);
+            // 
+            // btnProjects
+            // 
+            this.btnProjects.Location = new System.Drawing.Point(24, 156);
+            this.btnProjects.Name = "btnProjects";
+            this.btnProjects.Size = new System.Drawing.Size(150, 35);
+            this.btnProjects.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnProjects.StateCommon.Border.Rounding = 20;
+            this.btnProjects.TabIndex = 9;
+            this.btnProjects.Values.Text = "Projects";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.LimeGreen;
+            this.panel2.Location = new System.Drawing.Point(194, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(750, 50);
+            this.panel2.TabIndex = 8;
             // 
             // frmMain
             // 
