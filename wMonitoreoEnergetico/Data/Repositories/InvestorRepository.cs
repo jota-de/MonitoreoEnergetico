@@ -63,7 +63,7 @@ namespace wMonitoreoEnergetico.Data.Repositories
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@idInversor", inversor.idInversor);
             cmd.Parameters.AddWithValue("@nombreInversor", inversor.nombreInversor);
-            cmd.Parameters.AddWithValue("@codigoInversor", inversor.codigoInversor);
+            //cmd.Parameters.AddWithValue("@codigoInversor", inversor.codigoInversor);
             cmd.Parameters.AddWithValue("@tipoInversor", inversor.tipoInversor);
             cmd.Parameters.AddWithValue("@paisOrigenInversor", inversor.paisOrigenInversor);
             cmd.Parameters.AddWithValue("@emailInversor", inversor.emailInversor);

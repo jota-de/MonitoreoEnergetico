@@ -53,6 +53,9 @@
             this.btnBackInvestor = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnClearInvestors = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.dgvInvestors = new System.Windows.Forms.DataGridView();
+            this.lblInvestorId = new System.Windows.Forms.Label();
+            this.txtInvestorId = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.btnSearchInvestor = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbTypeInvestor)).BeginInit();
@@ -193,7 +196,7 @@
             // 
             this.lblTypeInvesotr.AutoSize = true;
             this.lblTypeInvesotr.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblTypeInvesotr.Location = new System.Drawing.Point(476, 97);
+            this.lblTypeInvesotr.Location = new System.Drawing.Point(476, 148);
             this.lblTypeInvesotr.Name = "lblTypeInvesotr";
             this.lblTypeInvesotr.Size = new System.Drawing.Size(111, 21);
             this.lblTypeInvesotr.TabIndex = 35;
@@ -201,7 +204,7 @@
             // 
             // txtPhoneInvestor
             // 
-            this.txtPhoneInvestor.Location = new System.Drawing.Point(752, 121);
+            this.txtPhoneInvestor.Location = new System.Drawing.Point(752, 172);
             this.txtPhoneInvestor.Name = "txtPhoneInvestor";
             this.txtPhoneInvestor.Size = new System.Drawing.Size(130, 35);
             this.txtPhoneInvestor.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -214,7 +217,7 @@
             // 
             this.lblPhoneInvestor.AutoSize = true;
             this.lblPhoneInvestor.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblPhoneInvestor.Location = new System.Drawing.Point(748, 97);
+            this.lblPhoneInvestor.Location = new System.Drawing.Point(748, 148);
             this.lblPhoneInvestor.Name = "lblPhoneInvestor";
             this.lblPhoneInvestor.Size = new System.Drawing.Size(113, 21);
             this.lblPhoneInvestor.TabIndex = 33;
@@ -224,7 +227,7 @@
             // 
             this.lblCountryInvestor.AutoSize = true;
             this.lblCountryInvestor.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblCountryInvestor.Location = new System.Drawing.Point(340, 97);
+            this.lblCountryInvestor.Location = new System.Drawing.Point(340, 148);
             this.lblCountryInvestor.Name = "lblCountryInvestor";
             this.lblCountryInvestor.Size = new System.Drawing.Size(111, 21);
             this.lblCountryInvestor.TabIndex = 32;
@@ -232,7 +235,7 @@
             // 
             // txtEmailInvestor
             // 
-            this.txtEmailInvestor.Location = new System.Drawing.Point(616, 121);
+            this.txtEmailInvestor.Location = new System.Drawing.Point(616, 172);
             this.txtEmailInvestor.Name = "txtEmailInvestor";
             this.txtEmailInvestor.Size = new System.Drawing.Size(130, 35);
             this.txtEmailInvestor.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -243,7 +246,7 @@
             // 
             // txtCountryInvestor
             // 
-            this.txtCountryInvestor.Location = new System.Drawing.Point(344, 121);
+            this.txtCountryInvestor.Location = new System.Drawing.Point(344, 172);
             this.txtCountryInvestor.Name = "txtCountryInvestor";
             this.txtCountryInvestor.Size = new System.Drawing.Size(130, 35);
             this.txtCountryInvestor.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -256,7 +259,7 @@
             // 
             this.lblEmailInvestor.AutoSize = true;
             this.lblEmailInvestor.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblEmailInvestor.Location = new System.Drawing.Point(612, 97);
+            this.lblEmailInvestor.Location = new System.Drawing.Point(612, 148);
             this.lblEmailInvestor.Name = "lblEmailInvestor";
             this.lblEmailInvestor.Size = new System.Drawing.Size(48, 21);
             this.lblEmailInvestor.TabIndex = 29;
@@ -266,7 +269,7 @@
             // 
             this.lblNameInvestor.AutoSize = true;
             this.lblNameInvestor.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblNameInvestor.Location = new System.Drawing.Point(206, 97);
+            this.lblNameInvestor.Location = new System.Drawing.Point(206, 148);
             this.lblNameInvestor.Name = "lblNameInvestor";
             this.lblNameInvestor.Size = new System.Drawing.Size(109, 21);
             this.lblNameInvestor.TabIndex = 28;
@@ -274,7 +277,7 @@
             // 
             // txtInvestorName
             // 
-            this.txtInvestorName.Location = new System.Drawing.Point(210, 121);
+            this.txtInvestorName.Location = new System.Drawing.Point(210, 172);
             this.txtInvestorName.Name = "txtInvestorName";
             this.txtInvestorName.Size = new System.Drawing.Size(130, 35);
             this.txtInvestorName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -286,7 +289,7 @@
             // cmbTypeInvestor
             // 
             this.cmbTypeInvestor.DropDownWidth = 151;
-            this.cmbTypeInvestor.Location = new System.Drawing.Point(480, 121);
+            this.cmbTypeInvestor.Location = new System.Drawing.Point(480, 172);
             this.cmbTypeInvestor.Name = "cmbTypeInvestor";
             this.cmbTypeInvestor.Size = new System.Drawing.Size(130, 35);
             this.cmbTypeInvestor.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -325,10 +328,46 @@
             // 
             this.dgvInvestors.BackgroundColor = System.Drawing.Color.White;
             this.dgvInvestors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInvestors.Location = new System.Drawing.Point(211, 162);
+            this.dgvInvestors.Location = new System.Drawing.Point(211, 213);
             this.dgvInvestors.Name = "dgvInvestors";
-            this.dgvInvestors.Size = new System.Drawing.Size(711, 246);
+            this.dgvInvestors.Size = new System.Drawing.Size(711, 195);
             this.dgvInvestors.TabIndex = 40;
+            // 
+            // lblInvestorId
+            // 
+            this.lblInvestorId.AutoSize = true;
+            this.lblInvestorId.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblInvestorId.Location = new System.Drawing.Point(207, 89);
+            this.lblInvestorId.Name = "lblInvestorId";
+            this.lblInvestorId.Size = new System.Drawing.Size(85, 21);
+            this.lblInvestorId.TabIndex = 42;
+            this.lblInvestorId.Text = "Investor ID";
+            this.lblInvestorId.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // txtInvestorId
+            // 
+            this.txtInvestorId.Location = new System.Drawing.Point(211, 113);
+            this.txtInvestorId.Name = "txtInvestorId";
+            this.txtInvestorId.Size = new System.Drawing.Size(130, 35);
+            this.txtInvestorId.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtInvestorId.StateCommon.Border.Rounding = 20;
+            this.txtInvestorId.TabIndex = 41;
+            this.txtInvestorId.TextChanged += new System.EventHandler(this.kryptonTextBox1_TextChanged_1);
+            // 
+            // btnSearchInvestor
+            // 
+            this.btnSearchInvestor.Location = new System.Drawing.Point(344, 113);
+            this.btnSearchInvestor.Name = "btnSearchInvestor";
+            this.btnSearchInvestor.Size = new System.Drawing.Size(120, 35);
+            this.btnSearchInvestor.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnSearchInvestor.StateCommon.Border.Rounding = 20;
+            this.btnSearchInvestor.TabIndex = 43;
+            this.btnSearchInvestor.Values.Text = "Search";
+            this.btnSearchInvestor.Click += new System.EventHandler(this.btnSearchInvestor_Click);
             // 
             // frmViewInvestors
             // 
@@ -336,6 +375,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(934, 461);
+            this.Controls.Add(this.btnSearchInvestor);
+            this.Controls.Add(this.lblInvestorId);
+            this.Controls.Add(this.txtInvestorId);
             this.Controls.Add(this.dgvInvestors);
             this.Controls.Add(this.btnBackInvestor);
             this.Controls.Add(this.btnClearInvestors);
@@ -395,5 +437,8 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnBackInvestor;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnClearInvestors;
         private System.Windows.Forms.DataGridView dgvInvestors;
+        private System.Windows.Forms.Label lblInvestorId;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtInvestorId;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnSearchInvestor;
     }
 }

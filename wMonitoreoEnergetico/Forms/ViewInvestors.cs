@@ -42,7 +42,6 @@ namespace wMonitoreoEnergetico.Forms
         {
             var inversores = _uow.InvestorRepository.ObtenerTodos();
             dgvInvestors.DataSource = inversores;
-            dgvInvestors.Columns["Id"].Visible = false; // Ocultar columna Id
             dgvInvestors.ClearSelection(); // Limpiar selección al cargar
         }
         private bool ValidarCampos()
@@ -68,7 +67,7 @@ namespace wMonitoreoEnergetico.Forms
         }
         private void btnUpdateInvestor_Click(object sender, EventArgs e)
         {
-            if(InversorSeleccionadoId.HasValue && ValidarCampos())
+            if (InversorSeleccionadoId.HasValue && ValidarCampos())
             {
                 var inversor = new Investor
                 {
@@ -96,6 +95,7 @@ namespace wMonitoreoEnergetico.Forms
         {
             if(InversorSeleccionadoId.HasValue)
             {
+               
                 var confirmResult = MessageBox.Show("¿Está seguro de que desea eliminar este inversor?", "Confirmación", MessageBoxButtons.YesNo);
                 if (confirmResult == DialogResult.Yes)
                 {
@@ -121,5 +121,51 @@ namespace wMonitoreoEnergetico.Forms
             this.Hide();
             new frmInvestors().Show();
         }
+        
+
+        private void btnSearchInvestor_Click(object sender, EventArgs e)
+        {
+            BuscarYMostrarInversorPorId(Convert.ToInt16(txtInvestorId.Text.Trim()));
+        }
+        private void BuscarYMostrarInversorPorId(short idInversor)
+        {
+            var inversores = _uow.InvestorRepository.ObtenerTodos();
+            var inversor = inversores.FirstOrDefault(i => i.idInversor == idInversor);
+
+            if (inversor != null)
+            {
+                InversorSeleccionadoId = inversor.idInversor;
+                txtInvestorName.Text = inversor.nombreInversor;
+                cmbTypeInvestor.SelectedItem = inversor.tipoInversor;
+                txtCountryInvestor.Text = inversor.paisOrigenInversor;
+                txtEmailInvestor.Text = inversor.emailInversor;
+                txtPhoneInvestor.Text = inversor.telefonoInversor.ToString();
+            }
+            else
+            {
+                MessageBox.Show("No se encontró un inversor con ese ID.");
+                LimpiarCampos();
+            }
+        }
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonTextBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
