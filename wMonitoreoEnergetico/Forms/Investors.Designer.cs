@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.kryptonConfi = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblMain = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnConstructors = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -48,25 +48,11 @@
             this.txtPhoneInvestor = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnCreateInvestor = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnViewInvestor = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.lblMain = new System.Windows.Forms.Label();
+            this.lblInvestors = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbTypeInvestor)).BeginInit();
             this.SuspendLayout();
-            // 
-            // kryptonConfi
-            // 
-            this.kryptonConfi.FormStyles.FormCommon.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.kryptonConfi.FormStyles.FormCommon.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.kryptonConfi.FormStyles.FormCommon.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonConfi.FormStyles.FormCommon.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
-            this.kryptonConfi.FormStyles.FormCommon.StateCommon.Border.Rounding = 12;
-            this.kryptonConfi.HeaderStyles.HeaderForm.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.kryptonConfi.HeaderStyles.HeaderForm.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.kryptonConfi.HeaderStyles.HeaderForm.StateCommon.ButtonEdgeInset = 10;
-            this.kryptonConfi.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, -1, -1, -1);
             // 
             // panel2
             // 
@@ -76,6 +62,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(750, 50);
             this.panel2.TabIndex = 11;
+            // 
+            // lblMain
+            // 
+            this.lblMain.AutoSize = true;
+            this.lblMain.Font = new System.Drawing.Font("Segoe UI Black", 18F);
+            this.lblMain.ForeColor = System.Drawing.Color.White;
+            this.lblMain.Location = new System.Drawing.Point(144, 9);
+            this.lblMain.Name = "lblMain";
+            this.lblMain.Size = new System.Drawing.Size(480, 32);
+            this.lblMain.TabIndex = 5;
+            this.lblMain.Text = "Renewable Energy Management System";
             // 
             // panel1
             // 
@@ -269,16 +266,15 @@
             this.btnViewInvestor.TabIndex = 23;
             this.btnViewInvestor.Values.Text = "View Investor";
             // 
-            // lblMain
+            // lblInvestors
             // 
-            this.lblMain.AutoSize = true;
-            this.lblMain.Font = new System.Drawing.Font("Segoe UI Black", 18F);
-            this.lblMain.ForeColor = System.Drawing.Color.White;
-            this.lblMain.Location = new System.Drawing.Point(144, 9);
-            this.lblMain.Name = "lblMain";
-            this.lblMain.Size = new System.Drawing.Size(480, 32);
-            this.lblMain.TabIndex = 5;
-            this.lblMain.Text = "Renewable Energy Management System";
+            this.lblInvestors.AutoSize = true;
+            this.lblInvestors.Font = new System.Drawing.Font("Segoe UI Black", 18F);
+            this.lblInvestors.Location = new System.Drawing.Point(485, 53);
+            this.lblInvestors.Name = "lblInvestors";
+            this.lblInvestors.Size = new System.Drawing.Size(123, 32);
+            this.lblInvestors.TabIndex = 24;
+            this.lblInvestors.Text = "Investors";
             // 
             // frmInvestors
             // 
@@ -286,6 +282,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(934, 461);
+            this.Controls.Add(this.lblInvestors);
             this.Controls.Add(this.btnViewInvestor);
             this.Controls.Add(this.btnCreateInvestor);
             this.Controls.Add(this.lblTypeInvesotr);
@@ -301,7 +298,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cmbTypeInvestor);
             this.Name = "frmInvestors";
-            this.Palette = this.kryptonConfi;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.Text = "Investors";
             this.Load += new System.EventHandler(this.frmInvestors_Load);
@@ -315,8 +311,6 @@
         }
 
         #endregion
-
-        private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonConfi;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton3;
@@ -336,5 +330,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnCreateInvestor;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnViewInvestor;
         private System.Windows.Forms.Label lblMain;
+        private System.Windows.Forms.Label lblInvestors;
     }
 }

@@ -49,7 +49,6 @@ namespace wMonitoreoEnergetico.Data.Repositories
             SqlCommand cmd = new SqlCommand("sp_InsertarInversor", _conexion);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@nombreInversor", inversor.nombreInversor);
-            cmd.Parameters.AddWithValue("@codigoInversor", inversor.codigoInversor);
             cmd.Parameters.AddWithValue("@tipoInversor", inversor.tipoInversor);
             cmd.Parameters.AddWithValue("@paisOrigenInversor", inversor.paisOrigenInversor);
             cmd.Parameters.AddWithValue("@emailInversor", inversor.emailInversor);
