@@ -67,6 +67,7 @@ namespace wMonitoreoEnergetico.Forms
         }
         private void btnUpdateInvestor_Click(object sender, EventArgs e)
         {
+            InversorSeleccionadoId = Convert.ToInt16(txtInvestorId.Text.Trim());
             if (InversorSeleccionadoId.HasValue && ValidarCampos())
             {
                 var inversor = new Investor
@@ -93,7 +94,8 @@ namespace wMonitoreoEnergetico.Forms
 
         private void btnDeleteInvestor_Click(object sender, EventArgs e)
         {
-            if(InversorSeleccionadoId.HasValue)
+            InversorSeleccionadoId = Convert.ToInt16(txtInvestorId.Text.Trim());
+            if (InversorSeleccionadoId.HasValue)
             {
                
                 var confirmResult = MessageBox.Show("¿Está seguro de que desea eliminar este inversor?", "Confirmación", MessageBoxButtons.YesNo);
@@ -111,18 +113,11 @@ namespace wMonitoreoEnergetico.Forms
             }
         }
 
-        private void btnClearInvestors_Click(object sender, EventArgs e)
-        {
-            LimpiarCampos();
-        }
-
         private void btnBackInvestor_Click(object sender, EventArgs e)
         {
             this.Hide();
             new frmInvestors().Show();
         }
-        
-
         private void btnSearchInvestor_Click(object sender, EventArgs e)
         {
             BuscarYMostrarInversorPorId(Convert.ToInt16(txtInvestorId.Text.Trim()));
@@ -147,6 +142,15 @@ namespace wMonitoreoEnergetico.Forms
                 LimpiarCampos();
             }
         }
+
+
+
+        //---------------- OMITIR LO SIGUIENTE-------------------------
+        private void btnClearInvestors_Click(object sender, EventArgs e)
+        {
+            
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 

@@ -51,7 +51,6 @@
             this.txtInvestorName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.cmbTypeInvestor = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.btnBackInvestor = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.btnClearInvestors = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.dgvInvestors = new System.Windows.Forms.DataGridView();
             this.lblInvestorId = new System.Windows.Forms.Label();
             this.txtInvestorId = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -311,19 +310,6 @@
             this.btnBackInvestor.Values.Text = "Back";
             this.btnBackInvestor.Click += new System.EventHandler(this.btnBackInvestor_Click);
             // 
-            // btnClearInvestors
-            // 
-            this.btnClearInvestors.Location = new System.Drawing.Point(523, 414);
-            this.btnClearInvestors.Name = "btnClearInvestors";
-            this.btnClearInvestors.Size = new System.Drawing.Size(150, 35);
-            this.btnClearInvestors.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnClearInvestors.StateCommon.Border.Rounding = 20;
-            this.btnClearInvestors.TabIndex = 38;
-            this.btnClearInvestors.Values.Text = "Clear";
-            this.btnClearInvestors.Click += new System.EventHandler(this.btnClearInvestors_Click);
-            // 
             // dgvInvestors
             // 
             this.dgvInvestors.BackgroundColor = System.Drawing.Color.White;
@@ -358,7 +344,7 @@
             // 
             // btnSearchInvestor
             // 
-            this.btnSearchInvestor.Location = new System.Drawing.Point(344, 113);
+            this.btnSearchInvestor.Location = new System.Drawing.Point(523, 414);
             this.btnSearchInvestor.Name = "btnSearchInvestor";
             this.btnSearchInvestor.Size = new System.Drawing.Size(120, 35);
             this.btnSearchInvestor.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -380,7 +366,6 @@
             this.Controls.Add(this.txtInvestorId);
             this.Controls.Add(this.dgvInvestors);
             this.Controls.Add(this.btnBackInvestor);
-            this.Controls.Add(this.btnClearInvestors);
             this.Controls.Add(this.lblInvestors);
             this.Controls.Add(this.btnDeleteInvestor);
             this.Controls.Add(this.btnUpdateInvestor);
@@ -435,7 +420,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtInvestorName;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox cmbTypeInvestor;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnBackInvestor;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnClearInvestors;
         private System.Windows.Forms.DataGridView dgvInvestors;
         private System.Windows.Forms.Label lblInvestorId;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtInvestorId;
