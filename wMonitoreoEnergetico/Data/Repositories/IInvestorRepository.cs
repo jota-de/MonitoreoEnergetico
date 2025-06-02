@@ -7,7 +7,7 @@ using wMonitoreoEnergetico.Entities;
 
 namespace wMonitoreoEnergetico.Data.Repositories
 {
-    internal interface IInvestorRepository
+    public interface IInvestorRepository
     {
         List<Investor> ObtenerTodos();
         void Insertar(Investor inversor);
