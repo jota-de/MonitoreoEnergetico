@@ -1,6 +1,6 @@
 ﻿namespace wMonitoreoEnergetico.Forms
 {
-    partial class ViewProject
+    partial class frmViewProject
     {
         /// <summary>
         /// Required designer variable.
@@ -422,7 +422,7 @@
             this.lblProjectId.TabIndex = 66;
             this.lblProjectId.Text = "ID Project";
             // 
-            // ViewProject
+            // frmViewProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -454,7 +454,7 @@
             this.Controls.Add(this.cmbTypeEnergy);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "ViewProject";
+            this.Name = "frmViewProject";
             this.Palette = this.kryptonConfi;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.Text = "ViewProject";

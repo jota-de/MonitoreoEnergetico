@@ -15,12 +15,12 @@ using wMonitoreoEnergetico.Data.UnitOfWork;
 namespace wMonitoreoEnergetico.Forms
 {
     
-    public partial class ViewProject : KryptonForm
+    public partial class frmViewProject : KryptonForm
     {
         private readonly IUnitOfWork _uow = new UnitOfWork();
         private short? ProjectSeleccionadoID = null;
 
-        public ViewProject()
+        public frmViewProject()
         {
             InitializeComponent();
         }
@@ -81,14 +81,16 @@ namespace wMonitoreoEnergetico.Forms
             {
                 var Proyecto = new Project
                 {
-                    nombreProyecto = txtProjectName.Text,
-                    tipoGeneracion = cmbTypeEnergy.SelectedItem.ToString(),
-                    departamento = txtProvince.Text,
-                    municipio = txtMunicipality.Text,
-                    numeroUnidades = Convert.ToInt16(txtUnits.Text.Trim()),
-                    capacidadInstalada = Convert.ToInt32(txtPower.Text.Trim()),
-                    idInversor = Convert.ToInt16(txtIdInvestor.Text.Trim()),
-                    idEmpresa = Convert.ToInt16(txtIdConstructor.Text.Trim())
+                     idProyecto= ProjectSeleccionadoID.Value,
+                     nombreProyecto = txtProjectName.Text,
+                     tipoGeneracion = cmbTypeEnergy.SelectedItem.ToString(),
+                     numeroUnidades = Convert.ToInt16(txtUnits.Text.Trim()),
+                     departamento = txtProvince.Text,
+                     municipio = txtMunicipality.Text,
+                     capacidadInstalada = Convert.ToInt32(txtPower.Text.Trim()),
+                     idInversor = Convert.ToInt16(txtIdInvestor.Text.Trim()),
+                     idEmpresa = Convert.ToInt16(txtIdConstructor.Text.Trim())
+
                 };
                 _uow.ProjectRepository.Actualizar(Proyecto);
                 CargarProjects();
