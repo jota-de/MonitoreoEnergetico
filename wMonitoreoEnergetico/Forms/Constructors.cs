@@ -93,5 +93,11 @@ namespace wMonitoreoEnergetico.Forms
             this.Hide();
             new frmInvestors().Show();
         }
+
+        private void kryptonButton3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
     }
 }

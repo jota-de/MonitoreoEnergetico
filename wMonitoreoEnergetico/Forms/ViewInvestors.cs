@@ -184,5 +184,10 @@ namespace wMonitoreoEnergetico.Forms
 
         }
 
+        private void kryptonButton3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
     }
 }

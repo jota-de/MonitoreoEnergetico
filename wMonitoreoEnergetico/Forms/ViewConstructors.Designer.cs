@@ -118,6 +118,7 @@
             this.kryptonButton3.StateCommon.Border.Rounding = 20;
             this.kryptonButton3.TabIndex = 12;
             this.kryptonButton3.Values.Text = "Log out";
+            this.kryptonButton3.Click += new System.EventHandler(this.kryptonButton3_Click);
             // 
             // btnConstructors
             // 

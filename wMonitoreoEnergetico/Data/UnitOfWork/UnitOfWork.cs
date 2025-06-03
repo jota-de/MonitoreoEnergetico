@@ -12,12 +12,14 @@ namespace wMonitoreoEnergetico.Data.UnitOfWork
         public IInvestorRepository InvestorRepository { get; }
         public IConstructorRepository constructorRepository { get; }
         public IProjectRepository ProjectRepository { get; }
+        public IRepositoryCountProjects RepositoryCountProjects { get; }
 
         public UnitOfWork()
         {
             InvestorRepository = new InvestorRepository();
             constructorRepository = new ConstructorRepository();
             ProjectRepository = new ProjectRespository();
+            RepositoryCountProjects = new RepositoryCountProjects();
         }
     }
 }

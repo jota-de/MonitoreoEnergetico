@@ -67,7 +67,9 @@
     <Compile Include="Data\Repositories\IInvestorRepository.cs" />
     <Compile Include="Data\Repositories\InvestorRepository.cs" />
     <Compile Include="Data\Repositories\IProjectRepository.cs" />
+    <Compile Include="Data\Repositories\IRepositoryCountProjects.cs" />
     <Compile Include="Data\Repositories\ProjectRespository.cs" />
+    <Compile Include="Data\Repositories\RepositoryCountProjects.cs" />
     <Compile Include="Data\UnitOfWork\IUnitOfWork.cs" />
     <Compile Include="Data\UnitOfWork\UnitOfWork.cs" />
     <Compile Include="Entities\Constructor.cs" />
