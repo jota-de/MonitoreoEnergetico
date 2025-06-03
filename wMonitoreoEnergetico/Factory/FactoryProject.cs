@@ -14,11 +14,11 @@ namespace wMonitoreoEnergetico.Factory
 
             switch (tipo)
             {
-                case "Deportivo":
+                case "Wind":
                     return new EolicoProject();
-                case "Todoterreno":
+                case "Solar":
                     return new SolarProject();
-                case "Hibrido":
+                case "Hydro":
                     return new HidricaProject();
                 default:
                     throw new ArgumentException("Tipo de Projecto no válido");

@@ -56,6 +56,7 @@
             this.txtPower = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtIdInvestor = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lblProjects = new System.Windows.Forms.Label();
+            this.btnBack = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbTypeEnergy)).BeginInit();
@@ -131,6 +132,7 @@
             this.btnConstructors.StateCommon.Border.Rounding = 20;
             this.btnConstructors.TabIndex = 11;
             this.btnConstructors.Values.Text = "Constructors";
+            this.btnConstructors.Click += new System.EventHandler(this.btnConstructors_Click);
             // 
             // btnInvestor
             // 
@@ -143,6 +145,7 @@
             this.btnInvestor.StateCommon.Border.Rounding = 20;
             this.btnInvestor.TabIndex = 10;
             this.btnInvestor.Values.Text = "Investors";
+            this.btnInvestor.Click += new System.EventHandler(this.btnInvestor_Click);
             // 
             // btnProjects
             // 
@@ -158,7 +161,7 @@
             // 
             // btnViewProjects
             // 
-            this.btnViewProjects.Location = new System.Drawing.Point(662, 294);
+            this.btnViewProjects.Location = new System.Drawing.Point(502, 294);
             this.btnViewProjects.Name = "btnViewProjects";
             this.btnViewProjects.Size = new System.Drawing.Size(150, 35);
             this.btnViewProjects.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -361,12 +364,26 @@
             this.lblProjects.TabIndex = 43;
             this.lblProjects.Text = "Projects";
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(709, 294);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(130, 35);
+            this.btnBack.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnBack.StateCommon.Border.Rounding = 20;
+            this.btnBack.TabIndex = 44;
+            this.btnBack.Values.Text = "Back";
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // frmProjects
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(934, 461);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblProjects);
             this.Controls.Add(this.txtIdInvestor);
             this.Controls.Add(this.lblIdInvestor);
@@ -431,5 +448,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPower;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtIdInvestor;
         private System.Windows.Forms.Label lblProjects;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnBack;
     }
 }

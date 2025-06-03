@@ -48,6 +48,12 @@ namespace wMonitoreoEnergetico
         {
             Application.Exit();
         }
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            lblValueSolar.Text = _uow.RepositoryCountProjects.CountProjectsSolar().ToString();
+            lblValueWind.Text = _uow.RepositoryCountProjects.CountProjectsWind().ToString();
+            lblValueHydro.Text = _uow.RepositoryCountProjects.CountProjectsHydro().ToString();
+        }
 
         private void lblNameProject_Click(object sender, EventArgs e)
         {
@@ -64,11 +70,5 @@ namespace wMonitoreoEnergetico
 
         }
 
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-            lblValueSolar.Text = _uow.RepositoryCountProjects.CountProjectsSolar().ToString();
-            lblValueWind.Text = _uow.RepositoryCountProjects.CountProjectsWind().ToString();
-            lblValueHydro.Text = _uow.RepositoryCountProjects.CountProjectsHydro().ToString();
-        }
     }
 }
