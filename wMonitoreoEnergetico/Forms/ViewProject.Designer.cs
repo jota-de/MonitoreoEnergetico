@@ -1,6 +1,6 @@
 ﻿namespace wMonitoreoEnergetico.Forms
 {
-    partial class frmProjects
+    partial class ViewProject
     {
         /// <summary>
         /// Required designer variable.
@@ -37,8 +37,12 @@
             this.btnConstructors = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnInvestor = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnProjects = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.btnViewProjects = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.btnCreateProject = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.txtIdInvestor = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.lblIdInvestor = new System.Windows.Forms.Label();
+            this.txtIdConstructor = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblCapacity = new System.Windows.Forms.Label();
+            this.txtPower = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lblTypeEnergy = new System.Windows.Forms.Label();
             this.txtMunicipality = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lblMunicipality = new System.Windows.Forms.Label();
@@ -49,16 +53,18 @@
             this.lblNameProject = new System.Windows.Forms.Label();
             this.txtProjectName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.cmbTypeEnergy = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.lblIdInvestor = new System.Windows.Forms.Label();
-            this.txtIdConstructor = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblCapacity = new System.Windows.Forms.Label();
-            this.txtPower = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.txtIdInvestor = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lblProjects = new System.Windows.Forms.Label();
+            this.dvgProject = new System.Windows.Forms.DataGridView();
+            this.btnSearchProject = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnBackProject = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnDeleteProject = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnUpdateProject = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.txtIdProject = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.lblProjectId = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbTypeEnergy)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgProject)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonConfi
@@ -82,7 +88,7 @@
             this.panel2.Location = new System.Drawing.Point(193, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(750, 50);
-            this.panel2.TabIndex = 15;
+            this.panel2.TabIndex = 17;
             // 
             // lblMain
             // 
@@ -105,7 +111,7 @@
             this.panel1.Location = new System.Drawing.Point(-7, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 466);
-            this.panel1.TabIndex = 14;
+            this.panel1.TabIndex = 16;
             // 
             // kryptonButton3
             // 
@@ -155,226 +161,287 @@
             this.btnProjects.TabIndex = 9;
             this.btnProjects.Values.Text = "Projects";
             // 
-            // btnViewProjects
-            // 
-            this.btnViewProjects.Location = new System.Drawing.Point(662, 294);
-            this.btnViewProjects.Name = "btnViewProjects";
-            this.btnViewProjects.Size = new System.Drawing.Size(150, 35);
-            this.btnViewProjects.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnViewProjects.StateCommon.Border.Rounding = 20;
-            this.btnViewProjects.TabIndex = 35;
-            this.btnViewProjects.Values.Text = "View Projects";
-            this.btnViewProjects.Click += new System.EventHandler(this.btnViewProjects_Click);
-            // 
-            // btnCreateProject
-            // 
-            this.btnCreateProject.Location = new System.Drawing.Point(325, 294);
-            this.btnCreateProject.Name = "btnCreateProject";
-            this.btnCreateProject.Size = new System.Drawing.Size(150, 35);
-            this.btnCreateProject.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnCreateProject.StateCommon.Border.Rounding = 20;
-            this.btnCreateProject.TabIndex = 26;
-            this.btnCreateProject.Values.Text = "Create Project";
-            this.btnCreateProject.Click += new System.EventHandler(this.btnCreateProject_Click);
-            // 
-            // lblTypeEnergy
-            // 
-            this.lblTypeEnergy.AutoSize = true;
-            this.lblTypeEnergy.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblTypeEnergy.Location = new System.Drawing.Point(738, 123);
-            this.lblTypeEnergy.Name = "lblTypeEnergy";
-            this.lblTypeEnergy.Size = new System.Drawing.Size(121, 21);
-            this.lblTypeEnergy.TabIndex = 34;
-            this.lblTypeEnergy.Text = "Generation type";
-            // 
-            // txtMunicipality
-            // 
-            this.txtMunicipality.Location = new System.Drawing.Point(571, 147);
-            this.txtMunicipality.Name = "txtMunicipality";
-            this.txtMunicipality.Size = new System.Drawing.Size(165, 35);
-            this.txtMunicipality.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtMunicipality.StateCommon.Border.Rounding = 20;
-            this.txtMunicipality.TabIndex = 33;
-            // 
-            // lblMunicipality
-            // 
-            this.lblMunicipality.AutoSize = true;
-            this.lblMunicipality.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblMunicipality.Location = new System.Drawing.Point(567, 123);
-            this.lblMunicipality.Name = "lblMunicipality";
-            this.lblMunicipality.Size = new System.Drawing.Size(95, 21);
-            this.lblMunicipality.TabIndex = 32;
-            this.lblMunicipality.Text = "Municipality";
-            // 
-            // lblProvince
-            // 
-            this.lblProvince.AutoSize = true;
-            this.lblProvince.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblProvince.Location = new System.Drawing.Point(392, 123);
-            this.lblProvince.Name = "lblProvince";
-            this.lblProvince.Size = new System.Drawing.Size(70, 21);
-            this.lblProvince.TabIndex = 31;
-            this.lblProvince.Text = "Province";
-            // 
-            // txtUnits
-            // 
-            this.txtUnits.Location = new System.Drawing.Point(221, 211);
-            this.txtUnits.Name = "txtUnits";
-            this.txtUnits.Size = new System.Drawing.Size(165, 35);
-            this.txtUnits.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtUnits.StateCommon.Border.Rounding = 20;
-            this.txtUnits.TabIndex = 30;
-            // 
-            // txtProvince
-            // 
-            this.txtProvince.Location = new System.Drawing.Point(396, 147);
-            this.txtProvince.Name = "txtProvince";
-            this.txtProvince.Size = new System.Drawing.Size(165, 35);
-            this.txtProvince.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtProvince.StateCommon.Border.Rounding = 20;
-            this.txtProvince.TabIndex = 29;
-            // 
-            // lblUnits
-            // 
-            this.lblUnits.AutoSize = true;
-            this.lblUnits.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblUnits.Location = new System.Drawing.Point(217, 187);
-            this.lblUnits.Name = "lblUnits";
-            this.lblUnits.Size = new System.Drawing.Size(108, 21);
-            this.lblUnits.TabIndex = 28;
-            this.lblUnits.Text = "Units installed";
-            // 
-            // lblNameProject
-            // 
-            this.lblNameProject.AutoSize = true;
-            this.lblNameProject.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblNameProject.Location = new System.Drawing.Point(217, 123);
-            this.lblNameProject.Name = "lblNameProject";
-            this.lblNameProject.Size = new System.Drawing.Size(101, 21);
-            this.lblNameProject.TabIndex = 27;
-            this.lblNameProject.Text = "Project name";
-            // 
-            // txtProjectName
-            // 
-            this.txtProjectName.Location = new System.Drawing.Point(221, 147);
-            this.txtProjectName.Name = "txtProjectName";
-            this.txtProjectName.Size = new System.Drawing.Size(165, 35);
-            this.txtProjectName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtProjectName.StateCommon.Border.Rounding = 20;
-            this.txtProjectName.TabIndex = 25;
-            // 
-            // cmbTypeEnergy
-            // 
-            this.cmbTypeEnergy.DropDownWidth = 151;
-            this.cmbTypeEnergy.Location = new System.Drawing.Point(742, 147);
-            this.cmbTypeEnergy.Name = "cmbTypeEnergy";
-            this.cmbTypeEnergy.Size = new System.Drawing.Size(165, 35);
-            this.cmbTypeEnergy.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.cmbTypeEnergy.StateCommon.ComboBox.Border.Rounding = 22;
-            this.cmbTypeEnergy.TabIndex = 24;
-            // 
-            // lblIdInvestor
-            // 
-            this.lblIdInvestor.AutoSize = true;
-            this.lblIdInvestor.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblIdInvestor.Location = new System.Drawing.Point(567, 187);
-            this.lblIdInvestor.Name = "lblIdInvestor";
-            this.lblIdInvestor.Size = new System.Drawing.Size(85, 21);
-            this.lblIdInvestor.TabIndex = 41;
-            this.lblIdInvestor.Text = "ID investor";
-            // 
-            // txtIdConstructor
-            // 
-            this.txtIdConstructor.Location = new System.Drawing.Point(742, 211);
-            this.txtIdConstructor.Name = "txtIdConstructor";
-            this.txtIdConstructor.Size = new System.Drawing.Size(165, 35);
-            this.txtIdConstructor.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtIdConstructor.StateCommon.Border.Rounding = 20;
-            this.txtIdConstructor.TabIndex = 40;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label2.Location = new System.Drawing.Point(738, 187);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 21);
-            this.label2.TabIndex = 39;
-            this.label2.Text = "ID Contructor";
-            // 
-            // lblCapacity
-            // 
-            this.lblCapacity.AutoSize = true;
-            this.lblCapacity.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblCapacity.Location = new System.Drawing.Point(392, 187);
-            this.lblCapacity.Name = "lblCapacity";
-            this.lblCapacity.Size = new System.Drawing.Size(103, 21);
-            this.lblCapacity.TabIndex = 38;
-            this.lblCapacity.Text = "Power output";
-            // 
-            // txtPower
-            // 
-            this.txtPower.Location = new System.Drawing.Point(396, 211);
-            this.txtPower.Name = "txtPower";
-            this.txtPower.Size = new System.Drawing.Size(165, 35);
-            this.txtPower.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtPower.StateCommon.Border.Rounding = 20;
-            this.txtPower.TabIndex = 37;
-            // 
             // txtIdInvestor
             // 
-            this.txtIdInvestor.Location = new System.Drawing.Point(571, 211);
+            this.txtIdInvestor.Location = new System.Drawing.Point(565, 172);
             this.txtIdInvestor.Name = "txtIdInvestor";
             this.txtIdInvestor.Size = new System.Drawing.Size(165, 35);
             this.txtIdInvestor.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtIdInvestor.StateCommon.Border.Rounding = 20;
-            this.txtIdInvestor.TabIndex = 42;
+            this.txtIdInvestor.TabIndex = 58;
+            // 
+            // lblIdInvestor
+            // 
+            this.lblIdInvestor.AutoSize = true;
+            this.lblIdInvestor.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblIdInvestor.Location = new System.Drawing.Point(561, 148);
+            this.lblIdInvestor.Name = "lblIdInvestor";
+            this.lblIdInvestor.Size = new System.Drawing.Size(85, 21);
+            this.lblIdInvestor.TabIndex = 57;
+            this.lblIdInvestor.Text = "ID investor";
+            // 
+            // txtIdConstructor
+            // 
+            this.txtIdConstructor.Location = new System.Drawing.Point(736, 172);
+            this.txtIdConstructor.Name = "txtIdConstructor";
+            this.txtIdConstructor.Size = new System.Drawing.Size(165, 35);
+            this.txtIdConstructor.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtIdConstructor.StateCommon.Border.Rounding = 20;
+            this.txtIdConstructor.TabIndex = 56;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label2.Location = new System.Drawing.Point(732, 148);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 21);
+            this.label2.TabIndex = 55;
+            this.label2.Text = "ID Contructor";
+            // 
+            // lblCapacity
+            // 
+            this.lblCapacity.AutoSize = true;
+            this.lblCapacity.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblCapacity.Location = new System.Drawing.Point(386, 148);
+            this.lblCapacity.Name = "lblCapacity";
+            this.lblCapacity.Size = new System.Drawing.Size(103, 21);
+            this.lblCapacity.TabIndex = 54;
+            this.lblCapacity.Text = "Power output";
+            // 
+            // txtPower
+            // 
+            this.txtPower.Location = new System.Drawing.Point(390, 172);
+            this.txtPower.Name = "txtPower";
+            this.txtPower.Size = new System.Drawing.Size(165, 35);
+            this.txtPower.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtPower.StateCommon.Border.Rounding = 20;
+            this.txtPower.TabIndex = 53;
+            // 
+            // lblTypeEnergy
+            // 
+            this.lblTypeEnergy.AutoSize = true;
+            this.lblTypeEnergy.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblTypeEnergy.Location = new System.Drawing.Point(732, 84);
+            this.lblTypeEnergy.Name = "lblTypeEnergy";
+            this.lblTypeEnergy.Size = new System.Drawing.Size(121, 21);
+            this.lblTypeEnergy.TabIndex = 52;
+            this.lblTypeEnergy.Text = "Generation type";
+            // 
+            // txtMunicipality
+            // 
+            this.txtMunicipality.Location = new System.Drawing.Point(565, 108);
+            this.txtMunicipality.Name = "txtMunicipality";
+            this.txtMunicipality.Size = new System.Drawing.Size(165, 35);
+            this.txtMunicipality.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtMunicipality.StateCommon.Border.Rounding = 20;
+            this.txtMunicipality.TabIndex = 51;
+            // 
+            // lblMunicipality
+            // 
+            this.lblMunicipality.AutoSize = true;
+            this.lblMunicipality.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblMunicipality.Location = new System.Drawing.Point(561, 84);
+            this.lblMunicipality.Name = "lblMunicipality";
+            this.lblMunicipality.Size = new System.Drawing.Size(95, 21);
+            this.lblMunicipality.TabIndex = 50;
+            this.lblMunicipality.Text = "Municipality";
+            // 
+            // lblProvince
+            // 
+            this.lblProvince.AutoSize = true;
+            this.lblProvince.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblProvince.Location = new System.Drawing.Point(386, 84);
+            this.lblProvince.Name = "lblProvince";
+            this.lblProvince.Size = new System.Drawing.Size(70, 21);
+            this.lblProvince.TabIndex = 49;
+            this.lblProvince.Text = "Province";
+            // 
+            // txtUnits
+            // 
+            this.txtUnits.Location = new System.Drawing.Point(215, 172);
+            this.txtUnits.Name = "txtUnits";
+            this.txtUnits.Size = new System.Drawing.Size(165, 35);
+            this.txtUnits.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtUnits.StateCommon.Border.Rounding = 20;
+            this.txtUnits.TabIndex = 48;
+            // 
+            // txtProvince
+            // 
+            this.txtProvince.Location = new System.Drawing.Point(390, 108);
+            this.txtProvince.Name = "txtProvince";
+            this.txtProvince.Size = new System.Drawing.Size(165, 35);
+            this.txtProvince.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtProvince.StateCommon.Border.Rounding = 20;
+            this.txtProvince.TabIndex = 47;
+            // 
+            // lblUnits
+            // 
+            this.lblUnits.AutoSize = true;
+            this.lblUnits.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblUnits.Location = new System.Drawing.Point(211, 148);
+            this.lblUnits.Name = "lblUnits";
+            this.lblUnits.Size = new System.Drawing.Size(108, 21);
+            this.lblUnits.TabIndex = 46;
+            this.lblUnits.Text = "Units installed";
+            // 
+            // lblNameProject
+            // 
+            this.lblNameProject.AutoSize = true;
+            this.lblNameProject.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblNameProject.Location = new System.Drawing.Point(211, 84);
+            this.lblNameProject.Name = "lblNameProject";
+            this.lblNameProject.Size = new System.Drawing.Size(101, 21);
+            this.lblNameProject.TabIndex = 45;
+            this.lblNameProject.Text = "Project name";
+            // 
+            // txtProjectName
+            // 
+            this.txtProjectName.Location = new System.Drawing.Point(215, 108);
+            this.txtProjectName.Name = "txtProjectName";
+            this.txtProjectName.Size = new System.Drawing.Size(165, 35);
+            this.txtProjectName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtProjectName.StateCommon.Border.Rounding = 20;
+            this.txtProjectName.TabIndex = 44;
+            // 
+            // cmbTypeEnergy
+            // 
+            this.cmbTypeEnergy.DropDownWidth = 151;
+            this.cmbTypeEnergy.Location = new System.Drawing.Point(736, 108);
+            this.cmbTypeEnergy.Name = "cmbTypeEnergy";
+            this.cmbTypeEnergy.Size = new System.Drawing.Size(165, 35);
+            this.cmbTypeEnergy.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.cmbTypeEnergy.StateCommon.ComboBox.Border.Rounding = 22;
+            this.cmbTypeEnergy.TabIndex = 43;
             // 
             // lblProjects
             // 
             this.lblProjects.AutoSize = true;
             this.lblProjects.Font = new System.Drawing.Font("Segoe UI Black", 18F);
-            this.lblProjects.Location = new System.Drawing.Point(510, 53);
+            this.lblProjects.Location = new System.Drawing.Point(210, 52);
             this.lblProjects.Name = "lblProjects";
             this.lblProjects.Size = new System.Drawing.Size(109, 32);
-            this.lblProjects.TabIndex = 43;
+            this.lblProjects.TabIndex = 59;
             this.lblProjects.Text = "Projects";
             // 
-            // frmProjects
+            // dvgProject
+            // 
+            this.dvgProject.BackgroundColor = System.Drawing.Color.White;
+            this.dvgProject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgProject.Location = new System.Drawing.Point(199, 213);
+            this.dvgProject.Name = "dvgProject";
+            this.dvgProject.Size = new System.Drawing.Size(732, 195);
+            this.dvgProject.TabIndex = 60;
+            // 
+            // btnSearchProject
+            // 
+            this.btnSearchProject.Location = new System.Drawing.Point(536, 414);
+            this.btnSearchProject.Name = "btnSearchProject";
+            this.btnSearchProject.Size = new System.Drawing.Size(120, 35);
+            this.btnSearchProject.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnSearchProject.StateCommon.Border.Rounding = 20;
+            this.btnSearchProject.TabIndex = 65;
+            this.btnSearchProject.Values.Text = "Search";
+            this.btnSearchProject.Click += new System.EventHandler(this.btnSearchProject_Click);
+            // 
+            // btnBackProject
+            // 
+            this.btnBackProject.Location = new System.Drawing.Point(775, 414);
+            this.btnBackProject.Name = "btnBackProject";
+            this.btnBackProject.Size = new System.Drawing.Size(120, 35);
+            this.btnBackProject.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnBackProject.StateCommon.Border.Rounding = 20;
+            this.btnBackProject.TabIndex = 64;
+            this.btnBackProject.Values.Text = "Back";
+            this.btnBackProject.Click += new System.EventHandler(this.btnBackProject_Click);
+            // 
+            // btnDeleteProject
+            // 
+            this.btnDeleteProject.Location = new System.Drawing.Point(380, 414);
+            this.btnDeleteProject.Name = "btnDeleteProject";
+            this.btnDeleteProject.Size = new System.Drawing.Size(150, 35);
+            this.btnDeleteProject.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnDeleteProject.StateCommon.Border.Rounding = 20;
+            this.btnDeleteProject.TabIndex = 63;
+            this.btnDeleteProject.Values.Text = "Delete";
+            this.btnDeleteProject.Click += new System.EventHandler(this.btnDeleteProject_Click);
+            // 
+            // btnUpdateProject
+            // 
+            this.btnUpdateProject.Location = new System.Drawing.Point(224, 414);
+            this.btnUpdateProject.Name = "btnUpdateProject";
+            this.btnUpdateProject.Size = new System.Drawing.Size(150, 35);
+            this.btnUpdateProject.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnUpdateProject.StateCommon.Border.Rounding = 20;
+            this.btnUpdateProject.TabIndex = 62;
+            this.btnUpdateProject.Values.Text = "Update";
+            this.btnUpdateProject.Click += new System.EventHandler(this.btnUpdateProject_Click);
+            // 
+            // txtIdProject
+            // 
+            this.txtIdProject.Location = new System.Drawing.Point(565, 51);
+            this.txtIdProject.Name = "txtIdProject";
+            this.txtIdProject.Size = new System.Drawing.Size(165, 35);
+            this.txtIdProject.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtIdProject.StateCommon.Border.Rounding = 20;
+            this.txtIdProject.TabIndex = 67;
+            // 
+            // lblProjectId
+            // 
+            this.lblProjectId.AutoSize = true;
+            this.lblProjectId.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblProjectId.Location = new System.Drawing.Point(470, 56);
+            this.lblProjectId.Name = "lblProjectId";
+            this.lblProjectId.Size = new System.Drawing.Size(77, 21);
+            this.lblProjectId.TabIndex = 66;
+            this.lblProjectId.Text = "ID Project";
+            // 
+            // ViewProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(934, 461);
+            this.Controls.Add(this.txtIdProject);
+            this.Controls.Add(this.lblProjectId);
+            this.Controls.Add(this.btnSearchProject);
+            this.Controls.Add(this.btnBackProject);
             this.Controls.Add(this.lblProjects);
+            this.Controls.Add(this.btnDeleteProject);
+            this.Controls.Add(this.btnUpdateProject);
+            this.Controls.Add(this.dvgProject);
             this.Controls.Add(this.txtIdInvestor);
             this.Controls.Add(this.lblIdInvestor);
             this.Controls.Add(this.txtIdConstructor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblCapacity);
             this.Controls.Add(this.txtPower);
-            this.Controls.Add(this.btnViewProjects);
-            this.Controls.Add(this.btnCreateProject);
             this.Controls.Add(this.lblTypeEnergy);
             this.Controls.Add(this.txtMunicipality);
             this.Controls.Add(this.lblMunicipality);
@@ -387,15 +454,16 @@
             this.Controls.Add(this.cmbTypeEnergy);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "frmProjects";
+            this.Name = "ViewProject";
             this.Palette = this.kryptonConfi;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.Text = "Projects";
-            this.Load += new System.EventHandler(this.frmProjects_Load);
+            this.Text = "ViewProject";
+            this.Load += new System.EventHandler(this.ViewProject_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cmbTypeEnergy)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgProject)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -411,8 +479,12 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnConstructors;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnInvestor;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnProjects;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnViewProjects;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnCreateProject;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtIdInvestor;
+        private System.Windows.Forms.Label lblIdInvestor;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtIdConstructor;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCapacity;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPower;
         private System.Windows.Forms.Label lblTypeEnergy;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtMunicipality;
         private System.Windows.Forms.Label lblMunicipality;
@@ -423,12 +495,13 @@
         private System.Windows.Forms.Label lblNameProject;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtProjectName;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox cmbTypeEnergy;
-        private System.Windows.Forms.Label lblIdInvestor;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtIdConstructor;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblCapacity;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPower;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtIdInvestor;
         private System.Windows.Forms.Label lblProjects;
+        private System.Windows.Forms.DataGridView dvgProject;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnSearchProject;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnBackProject;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnDeleteProject;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnUpdateProject;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtIdProject;
+        private System.Windows.Forms.Label lblProjectId;
     }
 }

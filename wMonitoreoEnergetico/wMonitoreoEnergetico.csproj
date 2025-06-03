@@ -117,6 +117,12 @@
     <Compile Include="Forms\ViewInvestors.Designer.cs">
       <DependentUpon>ViewInvestors.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ViewProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewProject.Designer.cs">
+      <DependentUpon>ViewProject.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AuthService.cs" />
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ViewInvestors.resx">
       <DependentUpon>ViewInvestors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewProject.resx">
+      <DependentUpon>ViewProject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

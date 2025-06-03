@@ -129,6 +129,7 @@
             this.btnProjects.StateCommon.Border.Rounding = 20;
             this.btnProjects.TabIndex = 9;
             this.btnProjects.Values.Text = "Projects";
+            this.btnProjects.Click += new System.EventHandler(this.btnProjects_Click);
             // 
             // panel2
             // 
