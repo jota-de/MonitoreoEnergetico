@@ -36,17 +36,17 @@
             this.btnInvestor = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnProjects = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.kryptonPanel3 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.lblSolar = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblValueHydro = new System.Windows.Forms.Label();
-            this.lblValueSolar = new System.Windows.Forms.Label();
-            this.lblValueWind = new System.Windows.Forms.Label();
-            this.btnControlPanel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.lblMain = new System.Windows.Forms.Label();
+            this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.lblValueSolar = new System.Windows.Forms.Label();
+            this.lblSolar = new System.Windows.Forms.Label();
+            this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.lblValueHydro = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.kryptonPanel3 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.lblValueWind = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnControlPanel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
@@ -144,6 +144,18 @@
             this.panel2.Size = new System.Drawing.Size(750, 50);
             this.panel2.TabIndex = 8;
             // 
+            // lblMain
+            // 
+            this.lblMain.AutoSize = true;
+            this.lblMain.Font = new System.Drawing.Font("Segoe UI Black", 18F);
+            this.lblMain.ForeColor = System.Drawing.Color.White;
+            this.lblMain.Location = new System.Drawing.Point(135, 9);
+            this.lblMain.Name = "lblMain";
+            this.lblMain.Size = new System.Drawing.Size(480, 32);
+            this.lblMain.TabIndex = 6;
+            this.lblMain.Text = "Renewable Energy Management System";
+            this.lblMain.Click += new System.EventHandler(this.lblMain_Click);
+            // 
             // kryptonPanel1
             // 
             this.kryptonPanel1.Controls.Add(this.lblValueSolar);
@@ -154,25 +166,16 @@
             this.kryptonPanel1.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.kryptonPanel1.TabIndex = 9;
             // 
-            // kryptonPanel2
+            // lblValueSolar
             // 
-            this.kryptonPanel2.Controls.Add(this.lblValueHydro);
-            this.kryptonPanel2.Controls.Add(this.label1);
-            this.kryptonPanel2.Location = new System.Drawing.Point(270, 105);
-            this.kryptonPanel2.Name = "kryptonPanel2";
-            this.kryptonPanel2.Size = new System.Drawing.Size(250, 100);
-            this.kryptonPanel2.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.kryptonPanel2.TabIndex = 10;
-            // 
-            // kryptonPanel3
-            // 
-            this.kryptonPanel3.Controls.Add(this.lblValueWind);
-            this.kryptonPanel3.Controls.Add(this.label2);
-            this.kryptonPanel3.Location = new System.Drawing.Point(270, 317);
-            this.kryptonPanel3.Name = "kryptonPanel3";
-            this.kryptonPanel3.Size = new System.Drawing.Size(250, 100);
-            this.kryptonPanel3.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.kryptonPanel3.TabIndex = 10;
+            this.lblValueSolar.AutoSize = true;
+            this.lblValueSolar.BackColor = System.Drawing.Color.Transparent;
+            this.lblValueSolar.Font = new System.Drawing.Font("Segoe UI Black", 18F);
+            this.lblValueSolar.Location = new System.Drawing.Point(168, 30);
+            this.lblValueSolar.Name = "lblValueSolar";
+            this.lblValueSolar.Size = new System.Drawing.Size(24, 32);
+            this.lblValueSolar.TabIndex = 44;
+            this.lblValueSolar.Text = "-";
             // 
             // lblSolar
             // 
@@ -186,28 +189,15 @@
             this.lblSolar.Text = "Solar";
             this.lblSolar.Click += new System.EventHandler(this.lblNameProject_Click);
             // 
-            // label1
+            // kryptonPanel2
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label1.Location = new System.Drawing.Point(3, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 21);
-            this.label1.TabIndex = 28;
-            this.label1.Text = "Hydro";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label2.Location = new System.Drawing.Point(3, 3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 21);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Wind";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.kryptonPanel2.Controls.Add(this.lblValueHydro);
+            this.kryptonPanel2.Controls.Add(this.label1);
+            this.kryptonPanel2.Location = new System.Drawing.Point(270, 105);
+            this.kryptonPanel2.Name = "kryptonPanel2";
+            this.kryptonPanel2.Size = new System.Drawing.Size(250, 100);
+            this.kryptonPanel2.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.kryptonPanel2.TabIndex = 10;
             // 
             // lblValueHydro
             // 
@@ -221,16 +211,26 @@
             this.lblValueHydro.Text = "-";
             this.lblValueHydro.Click += new System.EventHandler(this.lblValueHydro_Click);
             // 
-            // lblValueSolar
+            // label1
             // 
-            this.lblValueSolar.AutoSize = true;
-            this.lblValueSolar.BackColor = System.Drawing.Color.Transparent;
-            this.lblValueSolar.Font = new System.Drawing.Font("Segoe UI Black", 18F);
-            this.lblValueSolar.Location = new System.Drawing.Point(168, 30);
-            this.lblValueSolar.Name = "lblValueSolar";
-            this.lblValueSolar.Size = new System.Drawing.Size(24, 32);
-            this.lblValueSolar.TabIndex = 44;
-            this.lblValueSolar.Text = "-";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label1.Location = new System.Drawing.Point(3, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 21);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "Hydro";
+            // 
+            // kryptonPanel3
+            // 
+            this.kryptonPanel3.Controls.Add(this.lblValueWind);
+            this.kryptonPanel3.Controls.Add(this.label2);
+            this.kryptonPanel3.Location = new System.Drawing.Point(270, 317);
+            this.kryptonPanel3.Name = "kryptonPanel3";
+            this.kryptonPanel3.Size = new System.Drawing.Size(250, 100);
+            this.kryptonPanel3.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.kryptonPanel3.TabIndex = 10;
             // 
             // lblValueWind
             // 
@@ -243,6 +243,18 @@
             this.lblValueWind.TabIndex = 44;
             this.lblValueWind.Text = "-";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label2.Location = new System.Drawing.Point(3, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 21);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Wind";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // btnControlPanel
             // 
             this.btnControlPanel.Location = new System.Drawing.Point(655, 337);
@@ -254,17 +266,7 @@
             this.btnControlPanel.StateCommon.Border.Rounding = 20;
             this.btnControlPanel.TabIndex = 13;
             this.btnControlPanel.Values.Text = "Control Panel";
-            // 
-            // lblMain
-            // 
-            this.lblMain.AutoSize = true;
-            this.lblMain.Font = new System.Drawing.Font("Segoe UI Black", 18F);
-            this.lblMain.ForeColor = System.Drawing.Color.White;
-            this.lblMain.Location = new System.Drawing.Point(135, 9);
-            this.lblMain.Name = "lblMain";
-            this.lblMain.Size = new System.Drawing.Size(480, 32);
-            this.lblMain.TabIndex = 6;
-            this.lblMain.Text = "Renewable Energy Management System";
+            this.btnControlPanel.Click += new System.EventHandler(this.btnControlPanel_Click);
             // 
             // frmMain
             // 

@@ -68,8 +68,10 @@
     <Compile Include="Data\Repositories\InvestorRepository.cs" />
     <Compile Include="Data\Repositories\IProjectRepository.cs" />
     <Compile Include="Data\Repositories\IRepositoryCountProjects.cs" />
+    <Compile Include="Data\Repositories\IUserRepository.cs" />
     <Compile Include="Data\Repositories\ProjectRespository.cs" />
     <Compile Include="Data\Repositories\RepositoryCountProjects.cs" />
+    <Compile Include="Data\Repositories\UserRepository.cs" />
     <Compile Include="Data\UnitOfWork\IUnitOfWork.cs" />
     <Compile Include="Data\UnitOfWork\UnitOfWork.cs" />
     <Compile Include="Entities\Constructor.cs" />
@@ -77,6 +79,13 @@
     <Compile Include="Entities\Project.cs" />
     <Compile Include="Entities\Usuario.cs" />
     <Compile Include="Factory\FactoryProject.cs" />
+    <Compile Include="Factory\FactoryRol.cs" />
+    <Compile Include="Forms\Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Constructors.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +139,9 @@
     <Compile Include="Services\AuthService.cs" />
     <Compile Include="Utils\DbConnectionSingleton.cs" />
     <Compile Include="Utils\SesionUsuario.cs" />
+    <EmbeddedResource Include="Forms\Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Constructors.resx">
       <DependentUpon>Constructors.cs</DependentUpon>
     </EmbeddedResource>

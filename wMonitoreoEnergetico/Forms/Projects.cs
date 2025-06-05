@@ -47,10 +47,40 @@ namespace wMonitoreoEnergetico.Forms
                 string.IsNullOrEmpty(txtPower.Text) ||
                 string.IsNullOrEmpty(txtIdInvestor.Text)||
                 string.IsNullOrEmpty(txtIdConstructor.Text))
+
             {
                 MessageBox.Show("Por favor, complete todos los campos.");
                 return false;
             }
+            return true;
+        }
+        private bool VerficarIds()
+        {
+            if (!short.TryParse(txtIdInvestor.Text.Trim(), out short idInversor))
+            {
+                MessageBox.Show("ID de inversor no válido.");
+                return false;
+            }
+            var inversores = _uow.InvestorRepository.ObtenerTodos();
+            if (!inversores.Any(i => i.idInversor == idInversor))
+            {
+                MessageBox.Show("El ID de inversor no existe.");
+                return false;
+            }
+
+            // Validar que el ID del constructor exista
+            if (!short.TryParse(txtIdConstructor.Text.Trim(), out short idConstructor))
+            {
+                MessageBox.Show("ID de constructor no válido.");
+                return false;
+            }
+            var constructores = _uow.constructorRepository.ObtenerTodos();
+            if (!constructores.Any(c => c.idConstructor == idConstructor))
+            {
+                MessageBox.Show("El ID de constructor no existe.");
+                return false;
+            }
+
             return true;
         }
         private void LimpiarCampos()
@@ -67,22 +97,29 @@ namespace wMonitoreoEnergetico.Forms
 
         private void btnCreateProject_Click(object sender, EventArgs e)
         {
-            if (ValidarCampos())
+            try
             {
-                var proyecto = new Project
+                if (ValidarCampos() && VerficarIds())
                 {
-                    nombreProyecto = txtProjectName.Text,
-                    tipoGeneracion = cmbTypeEnergy.SelectedItem.ToString(),
-                    departamento = txtProvince.Text,
-                    municipio = txtMunicipality.Text,
-                    numeroUnidades = Convert.ToInt16(txtUnits.Text.Trim()),
-                    capacidadInstalada = Convert.ToInt32(txtPower.Text.Trim()),
-                    idInversor = Convert.ToInt16(txtIdInvestor.Text.Trim()),
-                    idEmpresa = Convert.ToInt16(txtIdConstructor.Text.Trim())
-                };
-                _uow.ProjectRepository.Insertar(proyecto);
-                LimpiarCampos();
-                MessageBox.Show("Proyecto creado correctamente.");
+                    var proyecto = new Project
+                    {
+                        nombreProyecto = txtProjectName.Text,
+                        tipoGeneracion = cmbTypeEnergy.SelectedItem.ToString(),
+                        departamento = txtProvince.Text,
+                        municipio = txtMunicipality.Text,
+                        numeroUnidades = Convert.ToInt16(txtUnits.Text.Trim()),
+                        capacidadInstalada = Convert.ToInt32(txtPower.Text.Trim()),
+                        idInversor = Convert.ToInt16(txtIdInvestor.Text.Trim()),
+                        idEmpresa = Convert.ToInt16(txtIdConstructor.Text.Trim())
+                    };
+                    _uow.ProjectRepository.Insertar(proyecto);
+                    LimpiarCampos();
+                    MessageBox.Show("Proyecto creado correctamente.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al crear el proyecto: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

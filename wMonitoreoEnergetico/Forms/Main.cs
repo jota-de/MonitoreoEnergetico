@@ -25,7 +25,7 @@ namespace wMonitoreoEnergetico
         {
             InitializeComponent();
         }
-        
+
         private void btnInvestor_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -70,5 +70,25 @@ namespace wMonitoreoEnergetico
 
         }
 
+        private void btnControlPanel_Click(object sender, EventArgs e)
+        {
+            var auth = new AuthService();
+            var usuario = auth.CheckRol(SesionUsuario.Actual, SesionUsuario.Actual.Rol);
+            if (usuario)
+            {
+                this.Hide();
+                new frmAdmin().Show();
+            }
+            else
+            {
+                MessageBox.Show("No tienes permisos para acceder al panel de control.", "Acceso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+        }
+
+        private void lblMain_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -13,6 +13,7 @@ namespace wMonitoreoEnergetico.Data.UnitOfWork
         IConstructorRepository constructorRepository { get; }
         IProjectRepository ProjectRepository { get; }
         IRepositoryCountProjects RepositoryCountProjects { get; }
+        IuserRepository UserRepository { get; }
 
 
     }

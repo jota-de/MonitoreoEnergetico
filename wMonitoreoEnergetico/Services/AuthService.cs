@@ -38,5 +38,17 @@ namespace wMonitoreoEnergetico.Services
             conn.Close();
             return null;
         }
+        public bool CheckRol(Usuario user, string rol)
+        {
+            switch (user.Rol)
+            {
+                case "Administrador":
+                    return true;
+                case "Vendedor":
+                    return false;
+                default:
+                    return false;
+            }
+        }
     }
 }
