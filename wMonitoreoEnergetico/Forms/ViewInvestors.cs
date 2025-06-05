@@ -11,6 +11,8 @@ using ComponentFactory.Krypton.Toolkit;
 using wMonitoreoEnergetico.Entities;
 using wMonitoreoEnergetico.Data.Repositories;
 using wMonitoreoEnergetico.Data.UnitOfWork;
+using wMonitoreoEnergetico.Services;
+using SistemaGestionProductosMVC.Utils;
 
 namespace wMonitoreoEnergetico.Forms
 {
@@ -94,22 +96,33 @@ namespace wMonitoreoEnergetico.Forms
 
         private void btnDeleteInvestor_Click(object sender, EventArgs e)
         {
-            InversorSeleccionadoId = Convert.ToInt16(txtInvestorId.Text.Trim());
-            if (InversorSeleccionadoId.HasValue)
+            var auth = new AuthService();
+
+            var usuario = auth.CheckRol(SesionUsuario.Actual,SesionUsuario.Actual.Rol);
+            if (usuario)
             {
-               
-                var confirmResult = MessageBox.Show("¿Está seguro de que desea eliminar este inversor?", "Confirmación", MessageBoxButtons.YesNo);
-                if (confirmResult == DialogResult.Yes)
+                InversorSeleccionadoId = Convert.ToInt16(txtInvestorId.Text.Trim());
+                if (InversorSeleccionadoId.HasValue)
                 {
-                    _uow.InvestorRepository.Eliminar(InversorSeleccionadoId.Value);
-                    CargarInversores();
-                    LimpiarCampos();
-                    MessageBox.Show("Inversor eliminado correctamente.");
+
+                    var confirmResult = MessageBox.Show("¿Está seguro de que desea eliminar este inversor?", "Confirmación", MessageBoxButtons.YesNo);
+                    if (confirmResult == DialogResult.Yes)
+                    {
+                        _uow.InvestorRepository.Eliminar(InversorSeleccionadoId.Value);
+                        CargarInversores();
+                        LimpiarCampos();
+                        MessageBox.Show("Inversor eliminado correctamente.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione un inversor para eliminar.");
                 }
             }
             else
             {
-                MessageBox.Show("Seleccione un inversor para eliminar.");
+                MessageBox.Show("No tienes permisos para acceder al panel de control.", "Acceso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
         }
 

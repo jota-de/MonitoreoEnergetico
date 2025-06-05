@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ComponentFactory.Krypton.Toolkit;
+using SistemaGestionProductosMVC.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,10 +9,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ComponentFactory.Krypton.Toolkit;
-using wMonitoreoEnergetico.Entities;
 using wMonitoreoEnergetico.Data.Repositories;
 using wMonitoreoEnergetico.Data.UnitOfWork;
+using wMonitoreoEnergetico.Entities;
+using wMonitoreoEnergetico.Services;
 
 namespace wMonitoreoEnergetico.Forms
 {
@@ -96,30 +98,42 @@ namespace wMonitoreoEnergetico.Forms
                 CargarProjects();
                 LimpiarCampos();
             }
+
             else
             {
-                MessageBox.Show("Seleccione un Constructor para actualizar.");
+                MessageBox.Show("Seleccione un Proyecto para actualizar.");
             }
         }
 
         private void btnDeleteProject_Click(object sender, EventArgs e)
         {
-            ProjectSeleccionadoID = Convert.ToInt16(txtIdProject.Text.Trim());
-            if (ProjectSeleccionadoID.HasValue)
+            var auth = new AuthService();
+            var usuario = auth.CheckRol(SesionUsuario.Actual, SesionUsuario.Actual.Rol);
+            if (usuario)
             {
-                var confirm = MessageBox.Show("¿Estás seguro de eliminar este Proyecto?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (confirm == DialogResult.Yes)
+                ProjectSeleccionadoID = Convert.ToInt16(txtIdProject.Text.Trim());
+                if (ProjectSeleccionadoID.HasValue)
                 {
-                    _uow.ProjectRepository.Eliminar(ProjectSeleccionadoID.Value);
-                    CargarProjects();
-                    LimpiarCampos();
-                    MessageBox.Show("Constructor eliminado correctamente.");
+                    var confirm = MessageBox.Show("¿Estás seguro de eliminar este Proyecto?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (confirm == DialogResult.Yes)
+                    {
+                        _uow.ProjectRepository.Eliminar(ProjectSeleccionadoID.Value);
+                        CargarProjects();
+                        LimpiarCampos();
+                        MessageBox.Show("Proyecto eliminado correctamente.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione un Proyecto para eliminar.");
                 }
             }
             else
             {
-                MessageBox.Show("Seleccione un Constructor para eliminar.");
+                MessageBox.Show("No tienes permisos para acceder al panel de control.", "Acceso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
+            
 
         }
 
